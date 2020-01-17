@@ -37,6 +37,17 @@ public class Stuff {
 	}
 
     // Returns all prime factors of a number
-    static int[] factorize(int a);
+    static int[] factorize(int a) {
+	int p=2;
+	while (a%p != 0) {
+		p++;
+	}
+	int[] x = factorize(a/p);
+	int[] y = new int[x.length];
+	y[0] = p;
+	for (int i=1; i<y.length; i++) {
+		y[i] = x[i-1];
+	}
+    }
 
 }
