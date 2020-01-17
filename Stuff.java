@@ -6,6 +6,10 @@ public class Stuff {
     // Returns the Fibonnaci sequence's nth number
     // ex. 1, 1, 2, 3, 5, 8 - 2 would be the third number
     static int fib(int n);
+	{
+	if (n<= 1) return n;
+	return fib(n-1) + fib(n-2); 
+	}
 
     // Sorts a list of integers from smallest to largest
     // Build your own - don't use a library sorting method
@@ -50,4 +54,4 @@ public class Stuff {
 	}
     }
 
-}
+
